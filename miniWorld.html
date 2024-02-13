@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini World</title>
+</head>
+
+<body>
+
+<p id="mini">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit laborum perferendis dolorem magnam quibusdam placeat itaque? Laboriosam, distinctio iste nulla illum obcaecati nisi officia ipsa recusandae voluptatibus. Velit, assumenda ipsum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, cum doloremque! Fuga placeat totam ipsum quia esse accusantium nesciunt sint. Minima quasi asperiores voluptatum assumenda vel molestias illo! Dolorum, illo!</p>
+
+    <div style="display: inline-block" >  
+        <span style="display: inline-block"> 
+             <label for="couleur">Choisissez une couleur :</label>
+            <input type="color"  id="couleur"  ><br>
+        </span> 
+
+<span style="display: inline-block">
+    <label for="number">Choisissez un nombre :</label>
+    <input type="number"  id="numero"min='8'><br>
+</span>
+
+<span>
+    <label for="police">Choisissez un police :</label>
+    <select id="police">
+        <option value="Verdana">Verdana</option>
+        <option value="Arial">Arial</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Roboto">Roboto </option>
+
+    </select>
+</span>
+
+    </div>
+
+
+
+
+<script>
+    
+var couleur=document.getElementById("couleur");
+var paragraphe=document.getElementById("mini");
+var nombre=document.getElementById("numero");
+
+couleur.addEventListener('change', function() {
+            paragraphe.style.color = couleur.value;
+        });
+
+ nombre.addEventListener('change', function() {
+            paragraphe.style.fontSize = nombre.value + 'px';
+        });
+
+
+        var police=document.getElementById("police");
+ police.addEventListener("change",function(){
+    paragraphe.style.fontFamily= police.value;
+ }
+ );
+
+
+</script>
+
+</body>
+
